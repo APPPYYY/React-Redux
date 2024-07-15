@@ -1,0 +1,30 @@
+const App = () => {
+  //variables
+  let foods = ["Apple", "Grapes", "Orange", "Strawberry", "Berry"];
+  //let foods = [];
+
+  //example of Map method - same as java map - Alternative of Loops
+  let mapFoods = foods.map((item) => (
+    <li class="list-group-item list-group-item-primary">{item}</li>
+  ));
+
+  //example of conditional rendering - if-else statement
+  // if (foods.length === 0) {
+  //   return <h1>No Food Available</h1>;
+  // }
+
+  //example of conditional rendering - Ternary operator
+  let ternaryMsg =
+    foods.length === 0 ? <h1>No Food Available</h1> : <h1>Healthy Food</h1>;
+
+  //example of conditional rendering - Logical operator
+  let logicalMsg = foods.length === 0 && <h2>Food List is empty</h2>;
+  return (
+    <>
+      {ternaryMsg}
+      {logicalMsg}
+      <ul class="list-group">{mapFoods}</ul>
+    </>
+  );
+};
+export default App;
